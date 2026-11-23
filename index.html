@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#12151b" />
+    <meta name="description" content="Bona Bot is a natural typing coding companion for your workspace." />
+    <title>Bona Bot - Coding Companion</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-left"></div>
+    <div class="ambient ambient-right"></div>
+
+    <header class="nav shell">
+      <a class="brand" href="#" aria-label="Bona Bot home">
+        <span class="brand-mark">&gt;_</span>
+        <span>Bona Bot</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#free">Free forever</a>
+      </nav>
+      <a class="nav-button" href="#download">Get Bona</a>
+    </header>
+
+    <main>
+      <section class="hero shell">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> Natural workspace companion</div>
+          <h1>Code with<br /><em>a human rhythm.</em></h1>
+          <p class="hero-lede">
+            A thoughtful coding agent that reads your project, explains the
+            work, and writes changes naturally inside your editor.
+          </p>
+          <div class="hero-actions" id="download">
+            <button class="primary-button" id="downloadButton">
+              Download for VS Code
+              <span aria-hidden="true">↗</span>
+            </button>
+            <a class="text-button" href="#how">See how it works <span>↓</span></a>
+          </div>
+          <div class="trust-row">
+            <span><b>✓</b> No subscription</span>
+            <span><b>✓</b> Works locally</span>
+            <span><b>✓</b> Open workflow</span>
+          </div>
+        </div>
+
+        <div class="demo-card" aria-label="Bona Bot chat preview">
+          <div class="window-bar">
+            <div class="window-dots"><i></i><i></i><i></i></div>
+            <span>~/workspace/bona</span>
+            <span class="status"><i></i> Live</span>
+          </div>
+          <div class="chat">
+            <div class="message user">
+              <div class="avatar">Y</div>
+              <div>
+                <span>You</span>
+                <p>Add a loading state to the checkout button.</p>
+              </div>
+            </div>
+            <div class="message bot">
+              <div class="avatar bot-avatar">&gt;_</div>
+              <div>
+                <span>Bona</span>
+                <p>I’ll update the component and preserve the existing payment flow.</p>
+                <div class="code-preview">
+                  <div class="code-file">CheckoutButton.tsx <b>+12 −3</b></div>
+                  <pre><code><span class="tag">const</span> [isLoading, setIsLoading] = <span class="tag">useState</span>(<span class="number">false</span>);
+
+<span class="tag">&lt;button</span> <span class="attr">disabled</span>={<span class="value">isLoading</span>} <span class="tag">&gt;</span>
+  {isLoading ? <span class="string">"Processing..."</span> : <span class="string">"Pay now"</span>}
+<span class="tag">&lt;/button&gt;</span></code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="prompt">
+            <span>Ask Bona to change anything...</span>
+            <button aria-label="Send message">↑</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="Product highlights">
+        <div class="ticker-track">
+          <span>Natural cadence</span><i>✦</i>
+          <span>Project-aware</span><i>✦</i>
+          <span>Fast edits</span><i>✦</i>
+          <span>Clear explanations</span><i>✦</i>
+          <span>Natural cadence</span><i>✦</i>
+          <span>Project-aware</span><i>✦</i>
+        </div>
+      </section>
+
+      <section class="features shell" id="features">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">Built for your flow</span>
+            <h2>Useful where<br />work actually happens.</h2>
+          </div>
+          <p>Less prompting ceremony. More context, clear edits, and confident progress.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card large">
+            <span class="feature-number">01</span>
+            <h3>Understands the project</h3>
+            <p>Follow references, find relevant files, and make changes that fit the codebase.</p>
+            <div class="file-map">
+              <div class="map-header"><span>Explorer</span><b>•••</b></div>
+              <div><span>⌄ src</span></div>
+              <div class="indent"><span>⌄ components</span></div>
+              <div class="active indent2"><span>Tsx</span> Checkout.tsx</div>
+              <div class="indent2"><span>Tsx</span> Button.tsx</div>
+              <div class="indent"><span>⌄ utils</span></div>
+            </div>
+          </article>
+          <article class="feature-card">
+            <span class="feature-number">02</span>
+            <h3>Writes naturally</h3>
+            <p>Changes appear with a calm, readable pace instead of an instant wall of text.</p>
+            <div class="typing-demo"><span id="typingText"></span><i></i></div>
+          </article>
+          <article class="feature-card">
+            <span class="feature-number">03</span>
+            <h3>Shows the work</h3>
+            <p>Every suggested edit stays visible, reviewable, and easy to accept or reject.</p>
+            <div class="diff-demo">
+              <div><del>- const state = false;</del></div>
+              <div><ins>+ const state = pending;</ins></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="process shell" id="how">
+        <div class="process-copy">
+          <span class="kicker">Simple by design</span>
+          <h2>From request<br />to result.</h2>
+        </div>
+        <ol class="steps">
+          <li><span>1</span><div><h3>Describe the change</h3><p>Write a request in plain language.</p></div></li>
+          <li><span>2</span><div><h3>Let Bona explore</h3><p>It checks the relevant files and context.</p></div></li>
+          <li><span>3</span><div><h3>Review together</h3><p>Accept, adjust, or continue in the same thread.</p></div></li>
+        </ol>
+      </section>
+
+      <section class="free shell" id="free">
+        <div>
+          <span class="kicker">No 250 shilling barrier</span>
+          <h2>One free tool.<br />The whole workflow.</h2>
+        </div>
+        <div class="free-panel">
+          <span class="free-price">KES 0</span>
+          <p>No subscription. No checkout. No premium tier.</p>
+          <a class="primary-button" href="#download">Start using Bona <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer shell">
+      <a class="brand" href="#"><span class="brand-mark">&gt;_</span><span>Bona Bot</span></a>
+      <p>Built for calm, capable coding.</p>
+      <p>© <span id="year"></span> Bona Bot</p>
+    </footer>
+
+    <div class="toast" id="toast" role="status">Demo download prepared — connect your installer link here.</div>
+    <script src="./script.js"></script>
+  </body>
+</html>
