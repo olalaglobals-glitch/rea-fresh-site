@@ -28,17 +28,18 @@
     <main>
       <section class="hero shell">
         <div class="hero-copy">
-          <div class="eyebrow"><span></span> Natural workspace companion</div>
-          <h1>Code with<br /><em>a human rhythm.</em></h1>
+          <div class="eyebrow"><span></span> Private, local coding companion</div>
+          <h1>Your code.<br /><em>Your laptop.</em></h1>
           <p class="hero-lede">
-            A thoughtful coding agent that reads your project, explains the
-            work, and writes changes naturally inside your editor.
+            Ask questions about a project and get code suggestions from a local
+            AI model. Your files stay on your laptop, and suggestions are never
+            applied without your review.
           </p>
           <div class="hero-actions" id="download">
-            <button class="primary-button" id="downloadButton">
-              Download for VS Code
+            <a class="primary-button" id="downloadButton" href="/download/BonaLocal.exe" download>
+              Download for Windows
               <span aria-hidden="true">↗</span>
-            </button>
+            </a>
             <a class="text-button" href="#how">See how it works <span>↓</span></a>
           </div>
           <div class="trust-row">
@@ -54,7 +55,7 @@
             <span>~/workspace/bona</span>
             <span class="status"><i></i> Live</span>
           </div>
-          <div class="chat">
+          <div class="chat" id="chatMessages">
             <div class="message user">
               <div class="avatar">Y</div>
               <div>
@@ -78,20 +79,20 @@
               </div>
             </div>
           </div>
-          <div class="prompt">
-            <span>Ask Bona to change anything...</span>
-            <button aria-label="Send message">↑</button>
+          <div class="prompt" id="chatPrompt">
+            <input id="chatInput" type="text" aria-label="Ask Bona" placeholder="Ask Bona to change anything..." />
+            <button id="chatSend" aria-label="Send message">↑</button>
           </div>
         </div>
       </section>
 
       <section class="ticker" aria-label="Product highlights">
         <div class="ticker-track">
-          <span>Natural cadence</span><i>✦</i>
+          <span>Local inference</span><i>✦</i>
           <span>Project-aware</span><i>✦</i>
-          <span>Fast edits</span><i>✦</i>
-          <span>Clear explanations</span><i>✦</i>
-          <span>Natural cadence</span><i>✦</i>
+          <span>Reviewable suggestions</span><i>✦</i>
+          <span>No subscription</span><i>✦</i>
+          <span>Local inference</span><i>✦</i>
           <span>Project-aware</span><i>✦</i>
         </div>
       </section>
@@ -121,8 +122,8 @@
           </article>
           <article class="feature-card">
             <span class="feature-number">02</span>
-            <h3>Writes naturally</h3>
-            <p>Changes appear with a calm, readable pace instead of an instant wall of text.</p>
+            <h3>Runs on your laptop</h3>
+            <p>Connect an Ollama model and get answers without sending your code to a hosted API.</p>
             <div class="typing-demo"><span id="typingText"></span><i></i></div>
           </article>
           <article class="feature-card">
@@ -168,7 +169,6 @@
       <p>© <span id="year"></span> Bona Bot</p>
     </footer>
 
-    <div class="toast" id="toast" role="status">Demo download prepared — connect your installer link here.</div>
     <script src="./script.js"></script>
   </body>
 </html>
